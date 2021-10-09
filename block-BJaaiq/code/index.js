@@ -2,9 +2,7 @@ let container=document.querySelector('.container');
 
 const nOfQuote=5;
 let start=0;
-if(start===0){
-    alert(`The content of DOM is loaded`);
-}
+
 
 function addContent(){
 
@@ -21,14 +19,18 @@ function addContent(){
     }
     
 }
-addContent();
+
 
 
  function scrollHandle(){
 
-    if(window.scrollY+window.innerHeight>= window.document.documentElement.scrollHeight){
+    if(window.scrollY+window.innerHeight>= window.document.documentElement.scrollHeight && start<quotes.length){
       addContent();
     }
  }
 
 window.addEventListener('scroll',scrollHandle);
+window.addEventListener('DOMContentLoaded',()=>{
+    alert(`The content of DOM is loaded`);
+    addContent();
+})
