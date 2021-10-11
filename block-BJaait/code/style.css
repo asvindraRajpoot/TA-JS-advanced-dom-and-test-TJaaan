@@ -1,0 +1,128 @@
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+    outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+    text-decoration: none;
+}
+del {
+    text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html{
+    font-size: 16px;
+}
+body{
+    background-color: #2972F4;
+}
+.container{
+    max-width: 1250px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+h1{
+    font-size: 3rem;
+    justify-content: center;
+    display: flex;
+    color: white;
+    font-weight: normal;
+  
+
+}
+header{
+    margin-top: 2rem;
+}
+
+
+form{
+    display: flex;
+    margin-top: 2rem;
+    
+  
+}
+.input-list{
+    display: flex;
+    width: 100%;
+    padding: 1rem;
+    border: .1rem solid white;
+    border-right: unset;
+    
+}
+.add{
+    font-size: 1.8rem;
+    border: .1rem solid white;
+    border-left: unset;
+}
+input{
+    background-color: #2972F4;
+    border: none;
+   
+    font-size: 1.5rem;
+    color: white;
+  
+}
+::placeholder{
+    color: white;
+}
+li{
+    color: #2972F4;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+div{
+    background-color: white;
+    margin-top: 1rem;
+    
+    color: #2972F4;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.hold{
+    opacity: .4;
+}
