@@ -27,42 +27,34 @@ form.addEventListener('submit',handleSubmit);
 
 
 function dragAndDrop(lists,e){
-    let start="";
-    let end="";
-    let index=0;
     console.log(e.target);
-    for(let i=0;i<lists.length;i++){
-        console.log(lists[i].innerText,i);
-        lists[i].addEventListener('dragstart',(e)=>{
-            // e.preventDefault();
+    let dragover="";
+    let draglast="";
+    for(list of lists){
+        console.log(list.innerText);
+        list.addEventListener('dragstart',(e)=>{
             console.log('dragStart has been triggered',e.target.innerText);
            
-          start=e.target.innerText;
-          index=i;
-         
-           
         });
-        lists[i].addEventListener('dragend',(e)=>{
-            console.log('dragEnd has been triggered',e.target.innerText);
-        });
-        lists[i].addEventListener('dragover',(e)=>{
+      
+        list.addEventListener('dragover',(e)=>{
+            console.log('dragOver has been triggered',e.target.innerText);
             e.preventDefault();
-            console.log('dragOver has been triggered');
+            dragover=e.target.innerText;
         });
-        lists[i].addEventListener('dragenter',(e)=>{
-            console.log('dragEnter has been triggered');
+        list.addEventListener('dragend',(e)=>{
+            console.log('dragEnd has been triggered',e.target.innerText);
+            e.target.innerText=draglast;
         });
-        lists[i].addEventListener('dragleave',(e)=>{
-            console.log('dragLeave has been triggered');
-        });
-        lists[i].addEventListener('drop',(e)=>{
+        list.addEventListener('drop',(e)=>{
             console.log('drop has been triggered',e.target.innerText);
-            end=e.target.innerText;
-            e.target.innerText=start;
-            lists[index].firstElementChild.innerText=end;
-            
-           
+            draglast=e.target.innerText;
+            e.target.firstElementChild.innerText=dragover;
+
+
         });
+       
+      
     }
 
 }
