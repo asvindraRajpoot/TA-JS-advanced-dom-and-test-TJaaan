@@ -45,4 +45,3 @@ expect(mockCallback2.mock.calls[1][0]).toBe(42);
 expect(mockCallback2.mock.results[0].value).toBe(42);
 
 
-import Cart from './index'
