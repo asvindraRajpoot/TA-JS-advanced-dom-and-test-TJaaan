@@ -21,7 +21,9 @@ class Cart {
 3. Implement a function that takes an array and some other arguments then removes the other arguments from that array:
 
 ```js
-function removeFromArray() {}
+function removeFromArray() {
+  
+}
 
 removeFromArray([1, 2, 3, 4], 3); // should remove 3 and return [1,2,4]
 ```
