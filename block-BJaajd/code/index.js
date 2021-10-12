@@ -1,4 +1,4 @@
-export default class Cart {
+ class Cart {
     constructor() {
       this.items = [];
     }
@@ -107,7 +107,7 @@ test('object assignment', () => {
     expect(() => compileAndroidCode()).toThrow(/JDK/);
   });
 
-  
+
 
 
 // 5. Write three test for the following function.
